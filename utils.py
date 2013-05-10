@@ -24,9 +24,9 @@ def load_reports():
 	empty_reports = scouting_reports.find({"report_url": None})
 	s = requests.Session()
 	for report in empty_reports:
-		report_url = 'http://scouts.baseballhall.org/%s' % report['link']
+		report_url = 'http://scouts.baseballhall.org/%s' % report['link'].split('&playerid=')[0]
 		time.sleep(1)
-
+		print report_url
 		r = s.get(report_url)
 		if r.status_code != 200:
 			borked += 1
