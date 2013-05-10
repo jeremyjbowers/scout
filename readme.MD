@@ -2,6 +2,8 @@
 
 MLB has offered a treasure trove of scouting reports on famous (and not famous) players. But because it's deployed as a Drupal site powered by an access database, the site crashes often. Heck, some of the player URLs have apostrophes in them and won't even load because they're performing SQL injection.
 
+We can do better.
+
 ## Scraper
 
 ```
