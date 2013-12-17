@@ -16,7 +16,7 @@ db = client.apps
 scouting_reports = db.scouting_reports
 wazer_wine = db.wazer_wine
 
-@app.route('/wine/wazer.json')
+@app.route('/scout/wazer.json')
 def wazer_json():
     from flask import request
     q = request.args.get('q', None)
